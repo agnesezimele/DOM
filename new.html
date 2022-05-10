@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<h2>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="title">Text of title</h2>
+</body>
+<script>
+    let newElement = document.createElement('h1');
+    let textToElement = document.createTextNode('This day is fine!');
+
+    newElement.appendChild(textToElement);
+
+    document.body.appendChild(newElement);
+    console.log(newElement);
+
+
+    let beforeH = document.createElement('h3');
+    beforeH.appendChild(textToElement);
+
+    let titleH = document.getElementById('title');
+
+    titleH.parentNode.insertBefore(beforeH, titleH)
+</script>
+</html>
